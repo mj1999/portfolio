@@ -1,0 +1,59 @@
+
+body{
+	margin:0px;
+}
+
+/*Body Header*/
+
+header{
+
+	height:65vh;
+	opacity: 0.8;
+	background-image: url(header.jpg);\
+	background-size: cover;
+	background-position: right;
+	background-attachment: fixed;
+	
+}
+
+/*Navigation*/
+
+nav ul{
+	list-style: none;
+
+}
+nav li{
+	display: inline-block;
+	margin: 1px 15px ;
+
+
+}
+nav li a{
+	text-decoration: none;
+	color:white;
+	font-size:150%;
+	transition: color 0.5s;
+}
+nav li a:hover{
+	color:black;
+}
+
+
+/*Body content*/
+
+#name{
+	color:floralwhite;
+	position: absolute;
+	left:0;
+	right:0;
+	margin:auto;
+	top:30vh;
+	font-size: 500%;
+}
+
+
+
+/*Text Property*/
+.text-center{
+	text-align: center;
+}
