@@ -8,7 +8,7 @@
 		<body>
 			<header id="body-header">
 				<nav>
-					<ul class="text-center">
+					<ul class="text-center horizontal-list">
 						<li><a href="#">Home</a></li>
 						<li><a href="#about">About</a></li>
 						<li><a href="#skills">Skills</a></li>
@@ -22,8 +22,21 @@
 				</nav>
 			</header>
 			<main>
-				<h1 id="name" class="text-center">Mayank Joshi</h1>
-				<a href="https://www.linkedin.com/in/mayank-joshi-9990a11aa/"><img src="linkedIN.jpeg"></a>
+				<div id="name-social-div" style="position:relative;">
+
+					<h1 id="name" class="text-center">Mayank Joshi</h1>
+					<div id="socials">
+						<ul class="text-center horizontal-list">
+							<li><a target="_blank" href="https://www.linkedin.com/in/mayank-joshi-9990a11aa/"><img id="linkedIN" src="linkedIN.jpeg"></a></li>
+							<li><a target="_blank" href="https://github.com/mj1999"><img id="github" src="github.jpg"></a></li>
+							<li><a target="_blank" href="https://leetcode.com/MayankJoshi_199/"><img id="leetcode" src="leetcode.jpg"></a></li>
+							<li><a target="_blank" href="mailto:mayank.joshi92@yahoo.com"><img id="yahoo" src="yahoo.jpg"></a></li>
+						</ul>
+					</div>
+					<div id="profile-pic" class="text-center">
+						<img src="profile.jpg">
+					</div>
+				</div>
 				<section id = "about"></section>
 				<section id="skills"></section>
 				<section id ="experience"></section>
