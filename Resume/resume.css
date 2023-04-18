@@ -8,6 +8,8 @@ body{
 header{
 
 	height:65vh;
+	width:100%;
+	
 	opacity: 0.8;
 	background-image: url(header.jpg);\
 	background-size: cover;
@@ -21,11 +23,11 @@ header{
 
 .horizontal-list{
 	list-style: none;
-
 }
 nav li{
 	display: inline-block;
-	margin: 1px 15px ;
+	margin: auto ;
+	padding:1vh 2vw;
 
 
 }
@@ -46,40 +48,141 @@ nav li a:hover{
 	color:floralwhite;
 	font-size: 500%;
 	margin:auto;
-	padding-left:2vw;
+	margin-bottom: 5vh;
 
 }
 #name-social-div {
 	position: absolute;
-	top:-45vh;
+	display: flex;
+	flex-direction: column;
+	top:15vh;
+	left:0;
+	right:0;
 	height:10vh;
+}
+#socials ul{
+	margin:2vh 0px;
+	padding:0px;
 }
 
 #socials li{
 	display: inline-block;
-
+	margin-left:0 ;
 }
 #socials li img{
 	height: 3vh;
 	width:2vw;
 	border-radius: 10px;
-	transition: background-color 0.5s;
+	transition: background-color 0.7s;
 }
 #socials li img:hover{
 	background-color: floralwhite;
 
 }
+
 #profile-pic img{
-	height: 30vh;
-	width: 15vw;
-	margin-left:2vw;
-	border-radius: 20%;
+	max-height: 30vh;
+	max-width: 15vw;
+	height: auto;
+	width: auto;
+	margin-top:-15%;
+	border-radius: 40%;
 	border-color: white;
 	border-style: solid;
-/*	border-width:2vw ;*/
+	box-shadow:0 0 23px grey;
+}
+
+#about{
+	margin:auto;
+	text-align: justify;
+	padding :0vh 10vw 5vh 10vw;
+	height: auto;
+	width:auto;
+	color:#81979c;
+	font-size: 3vh;
+	font-family: sans-serif;
+	font-weight: 50;
+	position: relative;
 
 }
+
+{
+	align-items: center;
+}
+.display{
+
+	width: 70%;
+	height: 400px;
+	padding:5vh 10vw;
+/*	border: 2px solid black;*/
+	box-shadow: 0 0 20px floralwhite;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.skill-progress{
+	margin: auto;
+	height: 3vh ;
+	width: 20%;
+	border: 2px solid #81979c;
+	border-radius: 20px;
+}
+
+.skill-progress div{
+	background-color: floralwhite;
+	height: inherit;
+	border-radius: inherit;
+}
+.perc-85 {
+	width: 85%;
+	position: relative;
+}
+.perc-90 {
+	width: 90%;
+	position: relative;
+}
+.perc-80 {
+	width: 80%;
+	position: relative;
+}
+
+.skill-name{
+	color: #81979c;
+	font-size: 100%;
+	margin-left: 10px;
+	font-family: sans-serif;	
+	font-weight: bold;
+	position:absolute;
+	top:15%;
+}
+
 /*Text Property*/
 .text-center{
 	text-align: center;
 }
+
+
+
+/*General rules*/
+section{
+	display:flex;
+	flex-direction:column;
+	padding-bottom:5vh;
+	align-items: center;
+	width:100%;
+}
+
+section:nth-child(2n){
+	background-color: floral-white;
+}
+section:nth-child(2n+1){
+	background-color: #bdd3d7;
+}
+.sub-headings{
+	display: inline-block;
+	color: Black;
+	font-size: 4vh;
+	font-family: sans-serif;
+}
+
