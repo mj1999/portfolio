@@ -6,23 +6,20 @@ body{
 /*Body Header*/
 
 header{
-
-	height:65vh;
+	height:67%;
 	width:100%;
-	
 	opacity: 0.8;
 	background-image: url(header.jpg);\
 	background-size: cover;
 	background-position: right;
 	background-attachment: fixed;
-
-	
 }
 
 /*Navigation*/
 
 .horizontal-list{
 	list-style: none;
+	padding-left: 0;
 }
 nav li{
 	display: inline-block;
@@ -46,22 +43,23 @@ nav li a:hover{
 
 #name{
 	color:floralwhite;
-	font-size: 500%;
+	font-size: 4rem;
 	margin:auto;
-	margin-bottom: 5vh;
+	margin-bottom: 2vh;
 
 }
 #name-social-div {
 	position: absolute;
 	display: flex;
 	flex-direction: column;
-	top:15vh;
+	top:12vh;
 	left:0;
 	right:0;
 	height:10vh;
+	z-index: 1;
 }
 #socials ul{
-	margin:2vh 0px;
+	margin:1vh 0px;
 	padding:0px;
 }
 
@@ -72,6 +70,8 @@ nav li a:hover{
 #socials li img{
 	height: 3vh;
 	width:2vw;
+	min-height: 25px;
+	min-width:20px;
 	border-radius: 10px;
 	transition: background-color 0.7s;
 }
@@ -81,15 +81,18 @@ nav li a:hover{
 }
 
 #profile-pic img{
-	max-height: 30vh;
-	max-width: 15vw;
+	max-height: 35vh;
+	max-width: 20vw;
+	min-height: 100px;
+	min-width: 100px;
 	height: auto;
 	width: auto;
-	margin-top:-15%;
+	margin-top:-18%;
 	border-radius: 40%;
 	border-color: white;
 	border-style: solid;
 	box-shadow:0 0 23px grey;
+
 }
 
 #about{
@@ -110,21 +113,18 @@ nav li a:hover{
 	align-items: center;
 }
 .display{
-
 	width: 70%;
-	height: 400px;
 	padding:5vh 10vw;
-/*	border: 2px solid black;*/
-	box-shadow: 0 0 20px floralwhite;
 	display: flex;
 	flex-wrap:wrap;
 	justify-content: space-between;
 	align-items: center;
 }
 .skill-progress{
-	margin: auto;
+	margin: 4vh auto;
 	height: 3vh ;
 	width: 20%;
+	min-width: 150px;
 	border: 2px solid #81979c;
 	border-radius: 20px;
 }
@@ -149,22 +149,239 @@ nav li a:hover{
 
 .skill-name{
 	color: #81979c;
-	font-size: 100%;
+	font-size: 1.5 vw;
 	margin-left: 10px;
 	font-family: sans-serif;	
 	font-weight: bold;
 	position:absolute;
 	top:15%;
 }
+#contact{
+	background-color: dimgrey;
+}
+#contact-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width:70%;
+	padding: 10px 5px;
+	margin: 2% 10px;
+	border:2px dashed whitesmoke;
+	border-radius: 10px;
+	flex-shrink: 2;
+}
+#contact-form input, textarea{
+	width:50%;
+	margin: 1.5vh auto;
+	height: 2rem;
+	min-width: 150px;
+	font-size: 1.5vh;
+	font-family: sans-serif;
+	font-weight: bold;
+	border-radius: 5px;
+	border-style: none;
+	box-shadow: 0 0 5px floralwhite;
+}
+#contact-form textarea{
+	margin-bottom: 3vh;
+	}
+#contact-form-button{
+	margin: 2vh auto;
+	border-color: grey;
+	border-style: solid;
+	height: 2rem;
+	width:30%;
+	min-width: 100px;
+	border-radius: 20px;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+#contact-form textarea{
+	min-height: 3rem;
+}
+#info{
+	margin: 2% auto;
+	padding:1vh 5vw;
+	width: 50%;
+	font-family: sans-serif;
+	font-size: 1rem;
+	text-align: justify;
+	height: auto;
+	width:auto;
+	flex-shrink: 1;
+}
+#contact-dipl{
+	margin:auto;
+	box-shadow: 0 0 20px black;
+	background-image: linear-gradient(to right,grey,floralwhite);
+	display: flex;
+	flex-direction: row;
+	padding-left: 2vw;
+}
+/*experience*/
+.timeline-display{
+	width: 90%;
+	position: relative;
+	padding-top:80px;
+	padding-bottom:100px;
+}
+.timeline-box{
+	color:#81979c;
+	font-family: sans-serif;
+	font-size: 1 em;
+	width:40%;
+	padding-right: 1vw;
+	margin-bottom: 2vh;
+	position: relative;
+	left:9.2%;
+	height: auto;
+	text-align: right;
+}
+.timeline-box:nth-child(2n){
+	position: relative;
+	left: 53%;
+	text-align: left;
 
-/*Text Property*/
-.text-center{
-	text-align: center;
+}
+.timeline-box h1{
+	margin: unset;
+	margin-bottom: 2px;
+}
+.exp-points{
+	text-align: left;
+}
+.exp-heading{
+	font-weight: bold;
+	color:#595959;
+}
+.company{
+	color: navy;
+}
+.role{
+	text-decoration: underline;
+}
+
+.duration{
+	font-size: 0.8em;
+	color:dodgerblue;
+}
+.timeline-divider{
+	position: absolute;
+	top:10%;
+	left:51%;
+	height: 80%;
+	width: 0;
+	border: 2px dashed black;
+	
+}
+.timeline-float{
+	position: sticky;
+	color:#595959;
+	top:20%;
+	font-size: 2rem;
+	transform: rotate(90deg);
+	z-index: 2;
+}
+
+.timeline-box:nth-child(2n+1)::after{
+	content:' ';
+	border-radius: 50%;
+	position: absolute;
+	top:4% ;
+	right: -2.6%;
+	width:10px ;
+	height:10px ;
+	background-color:grey;
+	z-index: 1;
+}
+.timeline-box:nth-child(2n)::after{
+	content:' ';
+	border-radius: 50%;
+	position: absolute;
+	top:4% ;
+	left: -5.3%;
+	width:10px ;
+	height:10px ;
+	background-color:grey;
+	z-index: 1;
+}
+
+
+/*Eduaction*/
+
+.edu-display{
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+
+}
+.edu-box{
+	width: 300px;
+	height: 200px;
+	margin: 2vh 5vw;
+}
+.edu-box h3{
+	margin:unset;
+}
+.edu-box h1{
+	color: black;
+	font-weight: bold;
+}
+.school-name{
+	position: relative;
+	color: navy;
+}
+#bbps::after{
+	content:'';
+	background-image: url(bbps.jpeg);
+	background-size: contain;
+	border-radius: 50%;
+	height: 60px ;
+	width: 60px ;
+	position: absolute;
+	top:-20%;
+	left: 100%;
+
+}
+#hlps::after{
+	content:'';
+	background-image: url(hlps.jpg);
+	background-size: contain;
+	border-radius: 50%;
+	height: 60px ;
+	width: 60px ;
+	position: absolute;
+	top:-20%;
+	left: 100%;
+
+}
+#jiit::after{
+	content:'';
+	background-image: url(jiit.png);
+	background-color: white;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 50%;
+	height: 60px ;
+	width: 60px ;
+	position: absolute;
+	top:-20%;
+	left: 100%;
+
 }
 
 
 
+
+
+
 /*General rules*/
+.text-center{
+	text-align: center;
+}
 section{
 	display:flex;
 	flex-direction:column;
@@ -182,7 +399,61 @@ section:nth-child(2n+1){
 .sub-headings{
 	display: inline-block;
 	color: Black;
-	font-size: 4vh;
+	font-size: 2em;
 	font-family: sans-serif;
 }
 
+@media screen and (max-width:1200px){
+	header{
+		height: 50%;
+	}
+	.timeline-display{
+		width: 100% !important;
+		padding: 0px ;
+
+	}
+	.timeline-divider{
+		top:3%;
+	}
+	.timeline-box:nth-child(2n+1){
+	position: relative;
+	left: 9.5%;
+	
+	}
+	.edu-box{
+		margin-right: 50%;
+	}
+}
+
+@media screen and (max-width:900px){
+	header{
+		height: 50%;
+	}
+	.timeline-divider{
+		height: 90%;
+		top:2%;
+		left:5%;
+	}
+	.timeline-box{
+		left:10% !important;
+		text-align: left !important;
+		width: 90%;
+	}
+	.timeline-box::after{
+		content: '';
+		left:-5.9% !important;
+	}
+	html{
+		font-size: 14px;
+	}
+
+
+	
+}
+@media screen and (max-width:700px){
+	header{
+		height: 40%;
+	}
+
+
+}
