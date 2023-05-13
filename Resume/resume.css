@@ -1,6 +1,7 @@
 
 body{
 	margin:0px;
+	min-width: 400px;
 }
 
 /*Body Header*/
@@ -36,6 +37,7 @@ nav li a{
 }
 nav li a:hover{
 	color:black;
+	cursor: pointer;
 }
 
 
@@ -50,13 +52,15 @@ nav li a:hover{
 }
 #name-social-div {
 	position: absolute;
-	display: flex;
-	flex-direction: column;
+	display: block;
+/*	flex-direction: column;*/
 	top:12vh;
 	left:0;
 	right:0;
 	height:10vh;
+	margin: 0px auto;
 	z-index: 1;
+	width: 350px;
 }
 #socials ul{
 	margin:1vh 0px;
@@ -133,8 +137,10 @@ nav li a:hover{
 	background-color: floralwhite;
 	height: inherit;
 	border-radius: inherit;
+	position: relative;
+	width:0;
 }
-.perc-85 {
+/* .perc-85 {
 	width: 85%;
 	position: relative;
 }
@@ -145,7 +151,7 @@ nav li a:hover{
 .perc-80 {
 	width: 80%;
 	position: relative;
-}
+} */
 
 .skill-name{
 	color: #81979c;
