@@ -1,0 +1,50 @@
+:root{
+    --hue:200;
+    --saturation:50%;
+    --foreground-color:hsl(var(--hue),var(--saturation),75%);
+    --background-color:hsl(var(--hue),var(--saturation),25%);
+}
+
+
+body{
+    margin:0;
+    background-color: var(--background-color);
+}
+.paddle{
+    --position:50;
+    background-color: var(--foreground-color);
+    position: absolute;
+    transform: translateY(-50%);
+    width: 1vw;
+    height: 10vh;
+    top: calc(var(--position)*1vh);
+    
+    
+
+}
+#paddle-left{
+    left: 1vw;
+}
+#paddle-right{
+    right: 1vw;
+}
+.ball{
+    --x:50;
+    --y:50;
+    background-color: var(--foreground-color);
+    position: absolute;
+    left: calc(var(--x)*1vw);
+    top: calc(var(--y)*1vh);
+    transform: translateY(-50%);
+    width: 2.5vh;
+    height: 2.5vh;
+    border-radius: 50%;
+    
+}
+.score{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--foreground-color);
+    opacity: 0.5;
+}
