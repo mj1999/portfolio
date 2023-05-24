@@ -9,8 +9,18 @@
     <title>PingPong Game</title>
 </head>
 <body>
+    <div id="startScreen">
+        <h1>Press 'Enter' to start the game</h1>
+        <div id="high-score"> your highscore record is : <span></span></div>
+        <div id="instructions">
+            <h2>Instructions</h2>
+            <p>To control the paddles use 'w' key to move upwards and 's' key to move downwards</p>
+        </div>
+    </div>
+
     <div class="score">
-        <div id="player-score">Round:</div>
+        <div>Score:</div>
+        <div id="player-score">0</div>
     </div>
     <div class="ball" id="ball"></div>
     <div class="paddle" id="paddle-left"></div>
