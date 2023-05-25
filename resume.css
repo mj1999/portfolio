@@ -383,11 +383,13 @@ nav li a:hover{
 	display: flex;
 	width: 80%;
 	justify-content: space-evenly;
+	flex-wrap: wrap;
 }
 #portfolio-display>a{
 	width: 400px;
 	height: 200px;
 	position: relative;
+	margin: 2vw;
 }
 .pf-items{
 	width: 100%;
@@ -476,6 +478,14 @@ section:nth-child(2n+1){
 	}
 	html{
 		font-size: 14px;
+	}
+	#portfolio-display>a{
+		width: 70%;
+		height: 60%;
+		margin: 2vw;
+	}
+	.pf-item-name{
+		bottom: 2vh;
 	}
 
 

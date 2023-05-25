@@ -5,20 +5,13 @@ function smoothScroll(element){
 
         let item = element.getAttribute("data-value");
         let rect = document.getElementById(item).getBoundingClientRect();
-        if(item=='portfolio'||item=='contact')
-        {
-            if(window.pageYOffset>=3020)
-            {
+        if (rect.top<=0||(window.innerHeight + Math.ceil(window.pageYOffset)) >= document.body.offsetHeight) {
+            
                 clearInterval(scrollInterval);
                 return;
-            }
         }
-        console.log(item);
-        if(rect.top<=0){
-            clearInterval(scrollInterval);
-            return;
-        }
-        // currPos+=30;
+    
+        
         window.scrollBy(0,30);
           
       },5); 
