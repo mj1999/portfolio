@@ -1,15 +1,27 @@
 function smoothScroll(element){
-    let currPos = window.pageYOffset; 
-    let endPos = document.getElementById(element.getAttribute("data-value")).offsetTop;
+    // let currPos = window.pageYOffset; 
+    
     var scrollInterval= setInterval(function(){
-        if(currPos>=endPos){
+
+        let item = element.getAttribute("data-value");
+        let rect = document.getElementById(item).getBoundingClientRect();
+        if(item=='portfolio'||item=='contact')
+        {
+            if(window.pageYOffset>=3020)
+            {
+                clearInterval(scrollInterval);
+                return;
+            }
+        }
+        console.log(item);
+        if(rect.top<=0){
             clearInterval(scrollInterval);
             return;
         }
-        currPos+=30;
+        // currPos+=30;
         window.scrollBy(0,30);
           
-      }); 
+      },5); 
 }
 let items = document.getElementsByClassName("nav-items");
 for(let item of items)
