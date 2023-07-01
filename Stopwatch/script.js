@@ -28,25 +28,29 @@ const update = function (el) {
     el.innerText = "0" + time;
   }
 };
-
+let execute = true;
 function start() {
-  interval1 = window.setInterval(() => {
-    rotate(secHand, false);
-    update(digiSecs);
-  }, 1000);
-  interval2 = window.setInterval(() => {
-    rotate(minHand, false);
-    update(digiMins);
-  }, 60 * 1000);
-  interval3 = window.setInterval(() => {
-    rotate(hrHand, false);
-    update(digiHrs);
-  }, 60 * 60 * 1000);
+  if (execute) {
+    interval1 = window.setInterval(() => {
+      rotate(secHand, false);
+      update(digiSecs);
+    }, 1000);
+    interval2 = window.setInterval(() => {
+      rotate(minHand, false);
+      update(digiMins);
+    }, 60 * 1000);
+    interval3 = window.setInterval(() => {
+      rotate(hrHand, false);
+      update(digiHrs);
+    }, 60 * 60 * 1000);
+  }
+  execute = false;
 }
 function stop() {
   window.clearInterval(interval1);
   window.clearInterval(interval2);
   window.clearInterval(interval3);
+  execute = true;
 }
 function reset() {
   window.clearInterval(interval1);
@@ -62,6 +66,7 @@ function reset() {
   digiMins.innerText = "00";
   digiSecs.innerText = "00";
   laps.innerHTML = "";
+  execute = true;
 }
 var lapNumber = 1;
 function lap() {
