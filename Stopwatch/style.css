@@ -1,0 +1,111 @@
+body {
+  background-color: rgba(206, 209, 194, 0.753);
+}
+#analog-watch {
+  width: 30vw;
+  height: 30vw;
+  background-color: white;
+  margin: auto;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px black;
+}
+#analog-watch::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+  z-index: 10;
+}
+#analog-watch span {
+  position: absolute;
+  inset: 10px;
+  transform: rotate(calc(30deg * var(--t)));
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+#analog-watch span b {
+  display: inline-block;
+  transform: rotate(calc(-30deg * var(--t)));
+}
+.circle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+.secs {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+}
+.mins {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+}
+.hrs {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+}
+
+.circle div {
+  width: 4px;
+  height: 50%;
+  border-radius: 25px;
+  /* position: relative; */
+  --deg: 0 deg;
+  transform-origin: bottom;
+  transform: rotate(var(--deg));
+}
+.secs div {
+  width: 2px;
+}
+.mins div {
+  width: 3px;
+}
+
+#digital {
+  margin: auto;
+  margin-top: 1vw;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.buttons button {
+  margin: 10px;
+  width: 8vw;
+  height: 3vh;
+}
+#start-btn {
+  color: green;
+  border-color: green;
+}
+#stop-btn {
+  color: red;
+  border-color: red;
+}
+#reset-btn {
+  color: brown;
+  border-color: brown;
+}
+#laps {
+  width: 50vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+#laps div {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
