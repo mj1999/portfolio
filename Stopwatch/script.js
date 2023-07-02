@@ -10,9 +10,13 @@ const rotate = function (el, ishrHand) {
   let degree = parseInt(
     getComputedStyle(el).getPropertyValue("--deg").split(" ")[0]                       //fetching integer part of deg variable in css, changing which allows us to move the clock hands.
   );
-  degree += 6;
+  
   if (ishrHand) {                                                                      // for hr hand per 60 minutes hour hand needs to move 30deg.
-    degree *= 5;
+    degree += 30;
+  }
+  else
+  {
+    degree += 6;
   }
   el.style.setProperty("--deg", degree + "deg");
 };
@@ -40,7 +44,7 @@ function start() {                                                              
       update(digiMins);
     }, 60 * 1000);
     interval3 = window.setInterval(() => {
-      rotate(hrHand, false);
+      rotate(hrHand, true);
       update(digiHrs);
     }, 60 * 60 * 1000);
   }
