@@ -121,12 +121,12 @@ const next = async function () {                                                
 renderHome();
 
 const detailsFunction = function (isChar) {                                                         // function for listening click events on view more button and add to favourite button
-  console.log('out')
+  
   if (isChar) {
-    console.log('in')
+   
     const viewDetail = document.querySelectorAll(".hero-card");
     for (el of viewDetail) {
-      console.log('in-loop')
+     
       el.addEventListener("click", function (e) {
         
         if (e.target.innerText == "View More") {
@@ -143,7 +143,6 @@ const detailsFunction = function (isChar) {                                     
           for(let i =0 ;i<favourites.length;i++)
           {
               if(favourites[i]==e.target.getAttribute("data-id")){
-                console.log('yes')
                 favourites.splice(i,1);
                 break;
               }

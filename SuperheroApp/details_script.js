@@ -43,7 +43,9 @@ const renderDetails = async function () {                                       
   for (let el of result.comics.items) {                                                           // renders comic items assosciated with the character
     const comicCard = document.createElement("div");
     comicCard.classList.add("details-info-card");
-    fetchData(el.resourceURI).then((comicResult) => {
+    let newUrl = el.resourceURI;
+    newUrl = newUrl.slice(0, 4) + "s" + newUrl.slice(4);                                          //resourceURI in http adding https protocol
+    fetchData(newUrl).then((comicResult) => {
       comicCard.innerHTML = `
         <img src="${
           comicResult.thumbnail["path"] +
@@ -55,13 +57,15 @@ const renderDetails = async function () {                                       
         </div>`;
       comicContainer.append(comicCard);
     });
-    // console.log(comicResult);
+   
   }
   const seriesContainer = document.getElementById("details-series-display");                    // renders series items assosciated with the character
   for (let el of result.series.items) {
     const seriesCard = document.createElement("div");
     seriesCard.classList.add("details-info-card");
-    fetchData(el.resourceURI).then((seriesResult) => {
+    let newUrl = el.resourceURI;
+    newUrl = newUrl.slice(0, 4) + "s" + newUrl.slice(4);
+    fetchData(newUrl).then((seriesResult) => {
       seriesCard.innerHTML = `
         <img src="${
           seriesResult.thumbnail["path"] +
@@ -84,10 +88,11 @@ const renderDetails = async function () {                                       
   }
   const eventsContainer = document.getElementById("details-events-display");
   for (let el of result.events.items) {
-    console.log(el);
     const eventsCard = document.createElement("div");
     eventsCard.classList.add("details-info-card");
-    fetchData(el.resourceURI).then((eventsResult) => {
+    let newUrl = el.resourceURI;
+    newUrl = newUrl.slice(0, 4) + "s" + newUrl.slice(4);
+    fetchData(newUrl).then((eventsResult) => {
       eventsCard.innerHTML = `
       <img src="${
         eventsResult.thumbnail["path"] +
