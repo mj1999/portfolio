@@ -1,0 +1,195 @@
+/* -------general properties--------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+img {
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+}
+nav {
+  display: flex;
+  height: 5vh;
+  width: 100%;
+  align-items: center;
+  background-color: rgb(190, 2, 2);
+}
+button {
+  background-color: rgb(255, 18, 18);
+  color: white;
+  height: 3vh;
+}
+button:hover{
+  cursor: pointer;
+}
+
+/* -------navigation properties--------- */
+#logo {
+  height: inherit;
+  width: 8vw;
+  border: 1px solid black;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+.nav-items li {
+  display: inline-block;
+  margin-right: 1vw;
+}
+.nav-item {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: white;
+}
+.nav-item:hover {
+  cursor: pointer;
+}
+.search-bar {
+  position: absolute;
+  right: 0.5%;
+}
+.search-bar button {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: none;
+  box-shadow: 0 0 2px black;
+  font-weight: 600;
+}
+#search-box {
+  height: 2.8vh;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: none;
+  box-shadow: 0 0 2px black;
+  padding-left: 5px;
+}
+/* -------Body properties--------- */
+/* Character related properties */
+#hero-container {
+  display: flex;
+  margin: 5vh auto;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 500px;
+  margin: 4vh auto;
+  background-color: rgb(34, 33, 33);
+  border-radius: 15px;
+  padding: 1%;
+}
+.hero-card > * {
+  margin-bottom: 5px;
+}
+.hero-image {
+  width: 100%;
+  height: 400px;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  margin-bottom: 0;
+  flex-grow: 5;
+}
+.hero-name {
+  color: rgb(253, 36, 36);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.hero-desc {
+  color: white;
+  font-size: large;
+  max-height: 100px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.view-more {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1vh;
+}
+.view-more button {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 0 2px white;
+  font-weight: 600;
+}
+/* comics related properties */
+.comic-card {
+  width: 500px;
+  height: 600px;
+  border-radius: unset;
+  box-shadow: 2px 2px 10px 3px grey;
+}
+.comic-image {
+  height: 250px;
+}
+
+/*------------ Character Details properties--------------- */
+#detailed-display {
+  color: white;
+  margin: 2vh auto;
+  border-radius: 15px;
+  padding: 1%;
+  height: 90%;
+  width: 90%;
+  background-color: rgb(34, 33, 33);
+}
+.details-name {
+  font-size: 4rem;
+  margin: 1vh 1vw;
+  text-align: center;
+  font-weight: 600;
+}
+.details-img {
+  height: 700px;
+  width: 500px;
+  border-radius: 15px;
+}
+.details {
+  display: flex;
+  font-size: 1.5rem;
+}
+.details > * {
+  margin-right: 1vw;
+}
+.name-desc {
+  flex-grow: 2;
+}
+#information {
+  display: flex;
+  flex-direction: column;
+}
+#information h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+.details-info-card {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 150px;
+  font-size: 0.7rem;
+  margin: 1vh 0.5vw;
+  background-color: rgb(182, 8, 8);
+  border-radius: 12px;
+  text-align: center;
+}
+.details-info-card img {
+  height: 80%;
+  margin-bottom: 0.5vh;
+  flex-shrink: 5;
+}
+#details-comics-display,
+#details-series-display,
+#details-events-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}

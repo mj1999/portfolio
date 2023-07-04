@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marvel Superheroes</title>
+  </head>
+  <body>
+    <nav>
+      <div id="logo">
+        <img src="logo.png" />
+      </div>
+      <ul class="nav-items">
+        <li>
+          <button onclick="renderHome()" class="nav-item">Characters</button>
+        </li>
+        <li>
+          <button onclick="renderComic()" class="nav-item">Comics</button>
+        </li>
+        <li>
+          <button onclick="renderFavs()" class="nav-item">Favorites</button>
+        </li>
+      </ul>
+      <div class="search-bar">
+        <input id="search-box" type="text" placeholder="Character search..." />
+        <button onclick="getResult()" id="search-button">Search</button>
+      </div>
+    </nav>
+    <main id="display">
+      <div id="hero-container"></div>
+      <button onclick="next()" id="next">Next Page</button>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
