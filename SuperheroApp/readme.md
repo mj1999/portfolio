@@ -1,6 +1,6 @@
 # Marvel App | front-end
 
-Front-end of Marvel application - connected with a back-end developed using data and routes obtained by the official [Marvel Comics API](https://developer.marvel.com/docs). Project developed for a challenge during studies at Growdev.
+Front-end of Marvel application - connected with a back-end developed using data and routes obtained by the official [Marvel Comics API](https://developer.marvel.com/docs). Project developed for a test during studies at CodingNinjas.
 
 <div align="center">
     <img alt="Screenshot Marvel App" title="Screenshot Marvel App" src="https://github.com/mj1999/portfolio/blob/1f023ea391212807ee58899f33a50ad4af006d56/superhero.jpg" width="100%">
