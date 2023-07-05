@@ -15,7 +15,7 @@ Front-end of Marvel application - SPA connected with a back-end developed using 
 ✔️ If the character has **no image**: displays the Marvel logo;<br>
 ✔️ If the character has **no description**: displays the text "description not informed".
 
-## :woman_technologist: Technologies and tools used
+## :man_technologist: Technologies and tools used
 
 - HTML
 - CSS
